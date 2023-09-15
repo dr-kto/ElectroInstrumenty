@@ -2,7 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 1vw;
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
 }
