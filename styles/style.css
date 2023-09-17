@@ -127,7 +127,7 @@ p {
   z-index: 999;
   aspect-ratio: 1/1;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .item.active {
     grid-column-end: 3;
     aspect-ratio: 0.5/1;
