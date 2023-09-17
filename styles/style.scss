@@ -154,8 +154,8 @@ p
         grid-row-end: 3;
         z-index: 999;
         aspect-ratio: 1/1;
-        @media (max-width: 600px) {
-            grid-column-end: 3;
+        @media (max-width: 650px) {
+            grid-column-end: 2;
             aspect-ratio: .5/1;
         }
         
