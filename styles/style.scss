@@ -155,8 +155,8 @@ p
         z-index: 999;
         aspect-ratio: 1/1;
         @media (max-width: 480px) {
-            grid-column-end: 4;
-            aspect-ratio: 2/1;
+            grid-column-end: 3;
+            aspect-ratio: .5/1;
         }
         
         & .item_count
