@@ -129,7 +129,7 @@ p {
 }
 @media (max-width: 650px) {
   .item.active {
-    grid-column-end: 2;
+    grid-column-end: 3;
     aspect-ratio: 0.5/1;
   }
 }
