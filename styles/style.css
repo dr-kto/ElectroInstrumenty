@@ -130,7 +130,7 @@ p {
 @media (max-width: 650px) {
   .item.active {
     grid-column-end: 3;
-    aspect-ratio: 2/1;
+    aspect-ratio: 2/3;
   }
 }
 .item.active .item_count {
