@@ -1,27 +1,167 @@
-body
-{
-    margin: 0;
-    padding: 0;
-    font-size: 1vw;
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
+* {
+  outline: none;
+  box-sizing: border-box;
 }
 
-.container
-{
-
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  color: var(--tg-theme-text-color);
+  background: var(--tg-theme-bg-color);
+}
+body.closed .container {
+  filter: grayscale(1) opacity(0.7);
 }
 
-.btn
-{
-    color: var(--tg-theme-button-text-color);
-    background: var(--tg-theme-button-color);
+.btn {
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
 }
-a
-{
-    color: var(--tg-theme-link-color);
+
+a {
+  color: var(--tg-theme-link-color);
 }
-p 
-{
-    color: var(--tg-theme-hint-color);
+
+p {
+  color: var(--tg-theme-hint-color);
 }
+
+.hide {
+  visibility: hidden;
+  height: 0 !important;
+}
+
+.container {
+  margin: 1em;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+}
+@media (max-width: 650px) {
+  .items {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+.items.expanded .item:not(.active) {
+  opacity: 0.4;
+  pointer-events: none;
+  aspect-ratio: 3/1;
+}
+.items.expanded .item:not(.active) .item_btn {
+  visibility: hidden;
+}
+@media (max-width: 480px) {
+  .items.expanded .item:not(.active) {
+    aspect-ratio: 1;
+    grid-column-start: auto;
+  }
+}
+
+.item {
+  background-color: rgba(168, 166, 166, 0.432);
+  margin: 0.5em;
+  aspect-ratio: 1/1;
+  border-radius: 0.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-item-count);
+  font-size: 0.7em;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  width: 2em;
+  height: 2em;
+  background-color: aqua;
+}
+.item div {
+  text-align: center;
+  margin: 0 auto;
+}
+.item_description {
+  height: 0;
+  visibility: hidden;
+}
+.item_description div {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.item.active .item_description {
+  width: 90%;
+  height: auto;
+  visibility: visible;
+  padding: 0 0.3em;
+}
+.item_close {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item.active .item_close {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2em;
+  height: 2em;
+}
+.item.active {
+  grid-column: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  grid-row-end: 3;
+  z-index: 999;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 480px) {
+  .item.active {
+    grid-column-end: 4;
+    aspect-ratio: 2/1;
+  }
+}
+.item.active .item_count {
+  visibility: hidden;
+}
+.item_img {
+  height: 5em;
+  width: 100%;
+}
+.item_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+}
+.item_btn {
+  max-width: 80%;
+  cursor: pointer;
+}
+.item_btn_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item_btn_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.item_btn_count div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
