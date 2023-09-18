@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.5em;
+  font-size: 1.5vmax;
   color: var(--tg-theme-text-color);
   background: var(--tg-theme-bg-color);
 }
@@ -123,7 +123,7 @@ p {
   grid-column: 1;
   grid-column-end: 3;
   grid-row: 1;
-  grid-row-end: 3;
+  grid-row-end: 6;
   z-index: 999;
   aspect-ratio: 1/1;
 }
@@ -137,7 +137,7 @@ p {
   visibility: hidden;
 }
 .item_img {
-  height: 5em;
+  height: 50%;
   width: 100%;
 }
 .item_img img {

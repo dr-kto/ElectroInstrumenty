@@ -19,7 +19,7 @@ for (let i = 0; i < items.length; i++)
                 item.querySelector(".item_btn_count").classList.remove("hide")
                 item.querySelector(".item_count").classList.remove("hide")
                 item.querySelector(".item_btn_count_number").innerText = count  
-                item.querySelector(".item_btn_count_number").innerText = count
+                item.querySelector(".item_count").innerText = count
                 total = price * count
                 break
             case "item_btn_count_decrease":
